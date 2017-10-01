@@ -5,10 +5,13 @@
     <title>My blog</title>
 </head>
 <body>
-    <h1>The main thing</h1>
-    <h3>Not the main thing</h3>
-    <em>Important thing</em>
-    <strong>Really important thing</strong>
+    <h1>All my posts</h1>
+    {% for post in posts %}
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <h4>{{ post.text }}</h4>
+        <br>
+    {% endfor %}
 
 </body>
 </html>
